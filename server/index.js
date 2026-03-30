@@ -18,6 +18,10 @@ const app = express();
 
 // Middleware
 app.use(cors());
+app.use(cors({
+  origin: 'https://yoshitha-porfolio.vercel.app',
+  credentials: true // if you use cookies or authentication
+}));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
