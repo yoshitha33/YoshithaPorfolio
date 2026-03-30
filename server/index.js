@@ -17,7 +17,6 @@ const certificateRoutes = require('./routes/certificateRoutes');
 const app = express();
 
 // Middleware
-app.use(cors());
 app.use(cors({
   origin: 'https://yoshitha-porfolio.vercel.app',
   credentials: true // if you use cookies or authentication
