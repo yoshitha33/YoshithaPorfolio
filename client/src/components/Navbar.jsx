@@ -56,9 +56,9 @@ const Navbar = () => {
 
           {/* Desktop Social + Theme */}
           <div className="hidden md:flex gap-4 items-center">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-300 hover:text-brand-highlight transition-colors"><FaGithub size={20} /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-300 hover:text-brand-highlight transition-colors"><FaLinkedin size={20} /></a>
-            <a href="https://leetcode.com" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-300 hover:text-brand-highlight transition-colors"><SiLeetcode size={20} /></a>
+            <a href="https://github.com/yoshitha33" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-300 hover:text-brand-highlight transition-colors"><FaGithub size={20} /></a>
+            <a href="https://www.linkedin.com/in/yoshitha-nunna-8492a3293/" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-300 hover:text-brand-highlight transition-colors"><FaLinkedin size={20} /></a>
+            <a href="https://leetcode.com/u/yoshitha_9/" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-300 hover:text-brand-highlight transition-colors"><SiLeetcode size={20} /></a>
             <button onClick={toggleTheme} className="ml-2 p-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors shadow-sm">
               {theme === 'dark' ? <FaSun size={18} /> : <FaMoon size={18} />}
             </button>
@@ -106,9 +106,9 @@ const Navbar = () => {
                 ))}
                 {/* Social links in mobile menu */}
                 <div className="flex gap-5 pt-4 px-4 border-t border-slate-200 dark:border-slate-800 mt-2">
-                  <a href="https://github.com" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-brand-highlight transition-colors"><FaGithub size={20} /></a>
-                  <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-brand-highlight transition-colors"><FaLinkedin size={20} /></a>
-                  <a href="https://leetcode.com" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-brand-highlight transition-colors"><SiLeetcode size={20} /></a>
+                  <a href="https://github.com/yoshitha33" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-brand-highlight transition-colors"><FaGithub size={20} /></a>
+                  <a href="https://www.linkedin.com/in/yoshitha-nunna-8492a3293/" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-brand-highlight transition-colors"><FaLinkedin size={20} /></a>
+                  <a href="https://leetcode.com/u/yoshitha_9/" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-brand-highlight transition-colors"><SiLeetcode size={20} /></a>
                 </div>
               </div>
             </motion.div>
