@@ -62,7 +62,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                   className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-800 dark:text-slate-200 outline-none focus:border-brand-highlight focus:ring-2 focus:ring-brand-highlight/20 transition-all shadow-sm"
-                  placeholder="John Doe"
+                  
                 />
               </div>
               <div className="w-full flex-1">
@@ -73,7 +73,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
                   className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-800 dark:text-slate-200 outline-none focus:border-brand-highlight focus:ring-2 focus:ring-brand-highlight/20 transition-all shadow-sm"
-                  placeholder="john@example.com"
+                
                 />
               </div>
             </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { usePortfolio } from '../context/PortfolioContext';
 import Hero from '../components/Hero';
+import About from '../components/About';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
@@ -23,6 +24,7 @@ const Home = () => {
     <div className="flex flex-col w-full text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
       <Navbar />
       <Hero profile={data.profile} />
+      <About profile={data.profile} education={data.education} />
       <Skills skills={data.skills} />
       <Projects projects={data.projects} />
       <Experience experience={data.experience} />

@@ -7,6 +7,7 @@ import ProfileManager from '../components/admin/ProfileManager';
 import ProjectsManager from '../components/admin/ProjectsManager';
 import SkillsManager from '../components/admin/SkillsManager';
 import ExperienceManager from '../components/admin/ExperienceManager';
+import EducationManager from '../components/admin/EducationManager';
 import CertificatesManager from '../components/admin/CertificatesManager';
 
 const AdminDashboard = () => {
@@ -29,6 +30,7 @@ const AdminDashboard = () => {
     { id: 'projects', label: 'Projects', icon: <FaProjectDiagram /> },
     { id: 'skills', label: 'Skills', icon: <FaTools /> },
     { id: 'experience', label: 'Experience', icon: <FaBriefcase /> },
+    { id: 'education', label: 'Education', icon: <FaCertificate /> },
     { id: 'certificates', label: 'Certificates', icon: <FaCertificate /> },
   ];
 
@@ -75,6 +77,7 @@ const AdminDashboard = () => {
           {activeTab === 'projects' && <ProjectsManager />}
           {activeTab === 'skills' && <SkillsManager />}
           {activeTab === 'experience' && <ExperienceManager />}
+          {activeTab === 'education' && <EducationManager />}
           {activeTab === 'certificates' && <CertificatesManager />}
         </div>
       </div>

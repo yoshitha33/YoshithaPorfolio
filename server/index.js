@@ -13,13 +13,26 @@ const experienceRoutes = require('./routes/experienceRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const userRoutes = require('./routes/userRoutes');
 const certificateRoutes = require('./routes/certificateRoutes');
+const educationRoutes = require('./routes/educationRoutes');
 
 const app = express();
 
 // Middleware
+const ALLOWED_ORIGINS = [
+  'https://yoshitha-porfolio.vercel.app', // production
+];
+
 app.use(cors({
-  origin: 'https://yoshitha-porfolio.vercel.app',
-  credentials: true // if you use cookies or authentication
+  origin: (origin, callback) => {
+    // Allow requests with no origin (e.g. curl, Postman, server-to-server)
+    if (!origin) return callback(null, true);
+    // Allow any localhost origin during local development
+    if (/^http:\/\/localhost:\d+$/.test(origin)) return callback(null, true);
+    // Allow listed production origins
+    if (ALLOWED_ORIGINS.includes(origin)) return callback(null, true);
+    callback(new Error(`CORS: origin '${origin}' not allowed`));
+  },
+  credentials: true,
 }));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
@@ -30,6 +43,7 @@ app.use('/api/user', userRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/skills', skillRoutes);
 app.use('/api/experience', experienceRoutes);
+app.use('/api/education', educationRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/certificates', certificateRoutes);
 

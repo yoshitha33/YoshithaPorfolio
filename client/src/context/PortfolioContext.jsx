@@ -8,6 +8,7 @@ export const PortfolioProvider = ({ children }) => {
     projects: [],
     skills: [],
     experience: [],
+    education: [],
     certificates: [],
     profile: null,
   });
@@ -16,23 +17,25 @@ export const PortfolioProvider = ({ children }) => {
 
   const fetchData = async () => {
     try {
-      const [projRes, skillsRes, expRes, userRes, certRes] = await Promise.all([
+      const [projRes, skillsRes, expRes, eduRes, userRes, certRes] = await Promise.all([
         fetch(`${API}/api/projects`),
         fetch(`${API}/api/skills`),
         fetch(`${API}/api/experience`),
+        fetch(`${API}/api/education`),
         fetch(`${API}/api/user`),
         fetch(`${API}/api/certificates`)
       ]);
 
-      const [projects, skills, experience, profile, certificates] = await Promise.all([
+      const [projects, skills, experience, education, profile, certificates] = await Promise.all([
         projRes.json(),
         skillsRes.json(),
         expRes.json(),
+        eduRes.json(),
         userRes.json(),
         certRes.json()
       ]);
 
-      setData({ projects, skills, experience, profile, certificates });
+      setData({ projects, skills, experience, education, profile, certificates });
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {

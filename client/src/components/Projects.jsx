@@ -19,7 +19,7 @@ const Projects = ({ projects }) => {
           <div className="w-20 h-1 bg-brand-accent rounded-full"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects && projects.length > 0 ? (
             projects.map((project, index) => (
               <motion.div
@@ -31,7 +31,7 @@ const Projects = ({ projects }) => {
                 whileHover={{ y: -10 }}
                 className="glass-effect rounded-2xl overflow-hidden group flex flex-col h-full"
               >
-                <div className="h-64 overflow-hidden relative border-b border-slate-100 dark:border-transparent">
+                <div className="h-48 overflow-hidden relative border-b border-slate-100 dark:border-transparent">
                   {project.image ? (
                     <img 
                       src={project.image} 
@@ -46,11 +46,11 @@ const Projects = ({ projects }) => {
                   <div className="absolute inset-0 bg-white/20 dark:bg-brand-dark/40 group-hover:bg-transparent transition-all duration-300"></div>
                 </div>
                 
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-semibold mb-2 text-slate-800 dark:text-white">{project.title}</h3>
-                  <p className="text-slate-600 dark:text-slate-400 mb-6 flex-grow">{project.description}</p>
+                <div className="p-5 flex flex-col flex-grow">
+                  <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-white">{project.title}</h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-400 mb-5 flex-grow">{project.description}</p>
                   
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-5">
                     {project.techStack?.map((tech, i) => (
                       <span key={i} className="text-xs font-medium px-3 py-1 rounded-full bg-brand-highlight/20 dark:bg-brand-highlight/10 text-brand-highlight">
                         {tech}
